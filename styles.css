@@ -102,6 +102,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    perspective: 1000px; /* For 3D effect */
 }
 
 .hero-image img {
@@ -113,28 +114,58 @@ nav {
 }
 
 .app-icon {
-    width: 280px;
-    height: 280px;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
     border-radius: 25%;
     box-shadow: 
-        0 0 20px rgba(255, 128, 171, 0.3),
-        0 0 40px rgba(255, 128, 171, 0.2),
-        0 0 60px rgba(255, 128, 171, 0.1);
-    border: 4px solid rgba(255, 255, 255, 0.8);
+        0 0 30px rgba(255, 128, 171, 0.4),
+        0 0 60px rgba(255, 128, 171, 0.2),
+        0 0 90px rgba(255, 128, 171, 0.1),
+        0 20px 25px rgba(0, 0, 0, 0.3); /* Strong bottom shadow for 3D effect */
+    border: 8px solid rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(5px);
     animation: float 6s ease-in-out infinite;
+    transition: all 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.app-icon:hover {
+    animation: none;
+    transform: 
+        translateY(-10px) 
+        rotateY(10deg) 
+        rotateX(5deg);
+    box-shadow: 
+        0 0 40px rgba(255, 128, 171, 0.5),
+        0 0 80px rgba(255, 128, 171, 0.3),
+        0 0 120px rgba(255, 128, 171, 0.1),
+        0 25px 30px rgba(0, 0, 0, 0.4);
+}
+
+.app-icon.rotating {
+    animation: rotate 3s ease-in-out;
 }
 
 @keyframes float {
     0% {
-        transform: translateY(0px);
+        transform: translateY(0px) rotateY(0deg);
     }
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-15px) rotateY(5deg);
     }
     100% {
-        transform: translateY(0px);
+        transform: translateY(0px) rotateY(0deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg) translateY(-10px);
+    }
+    100% {
+        transform: rotateY(360deg) translateY(-10px);
     }
 }
 
@@ -396,6 +427,13 @@ footer {
 }
 
 /* Responsive design */
+@media (max-width: 1200px) {
+    .app-icon {
+        width: 350px;
+        height: 350px;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-wrapper {
         flex-direction: column;
@@ -417,7 +455,7 @@ footer {
     }
 
     .app-icon {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
     }
 } 
