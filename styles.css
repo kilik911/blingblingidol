@@ -98,6 +98,10 @@ nav {
 .hero-image {
     flex: 1;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 .hero-image img {
@@ -106,6 +110,32 @@ nav {
     max-height: 500px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.app-icon {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 25%;
+    box-shadow: 
+        0 0 20px rgba(255, 128, 171, 0.3),
+        0 0 40px rgba(255, 128, 171, 0.2),
+        0 0 60px rgba(255, 128, 171, 0.1);
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* Download buttons */
@@ -384,5 +414,10 @@ footer {
 
     .nav-links {
         display: none;
+    }
+
+    .app-icon {
+        width: 200px;
+        height: 200px;
     }
 } 
