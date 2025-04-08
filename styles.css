@@ -105,12 +105,9 @@ nav {
     perspective: 1000px; /* For 3D effect */
 }
 
-.hero-image img {
-    max-width: 80%;
-    height: auto;
-    max-height: 500px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+.app-icon-wrapper {
+    transform-style: preserve-3d;
+    animation: float 8s ease-in-out infinite;
 }
 
 .app-icon {
@@ -129,15 +126,14 @@ nav {
         /* Inner shadow for depth */
         inset 0 -5px 15px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
-    transform-style: preserve-3d;
     transition: transform 0.5s ease;
-    animation: float 8s ease-in-out infinite;
     cursor: pointer;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Safari support */
 }
 
-.app-icon:hover {
-    animation-play-state: paused;
-    transform: rotateX(180deg);
+.app-icon-wrapper:hover .app-icon {
+    transform: rotateY(180deg);
 }
 
 @keyframes float {
@@ -150,6 +146,14 @@ nav {
     100% {
         transform: translateY(0px);
     }
+}
+
+.hero-image img {
+    max-width: 80%;
+    height: auto;
+    max-height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 /* Download buttons */

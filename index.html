@@ -37,7 +37,9 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="app-icon.png" alt="Bling Bling Idol App Icon" class="app-icon">
+                    <div class="app-icon-wrapper">
+                        <img src="app-icon.png" alt="Bling Bling Idol App Icon" class="app-icon">
+                    </div>
                 </div>
             </div>
         </section>
@@ -117,12 +119,5 @@
     <footer>
         <p>&copy; 2024 Bling Bling Idol. All rights reserved.</p>
     </footer>
-    <script>
-        document.querySelector('.app-icon').addEventListener('click', function() {
-            this.classList.remove('rotating');
-            void this.offsetWidth; // Trigger reflow
-            this.classList.add('rotating');
-        });
-    </script>
 </body>
 </html> 
