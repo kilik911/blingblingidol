@@ -129,25 +129,26 @@ nav {
         /* Inner shadow for depth */
         inset 0 -5px 15px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
-    animation: float-rotate 8s ease-in-out infinite;
     transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    animation: float 8s ease-in-out infinite;
+    cursor: pointer;
 }
 
-@keyframes float-rotate {
+.app-icon:hover {
+    animation-play-state: paused;
+    transform: rotateX(180deg);
+}
+
+@keyframes float {
     0% {
-        transform: translateY(0px) rotateY(0deg);
-    }
-    25% {
-        transform: translateY(-15px) rotateY(2deg);
+        transform: translateY(0px);
     }
     50% {
-        transform: translateY(-20px) rotateY(-2deg);
-    }
-    75% {
-        transform: translateY(-15px) rotateY(2deg);
+        transform: translateY(-20px);
     }
     100% {
-        transform: translateY(0px) rotateY(0deg);
+        transform: translateY(0px);
     }
 }
 
