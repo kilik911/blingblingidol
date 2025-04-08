@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #FF80AB;
+    --primary-light: #FFB2C9;
+    --primary-dark: #C94F7C;
+    --gradient-start: #FF80AB;
+    --gradient-end: #FFB2C9;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
@@ -39,7 +47,7 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ff4d8d;
+    color: var(--primary-color);
 }
 
 .nav-links a {
@@ -50,14 +58,14 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #ff4d8d;
+    color: var(--primary-color);
 }
 
 /* Hero section */
 .hero {
     position: relative;
     width: 100%;
-    background: linear-gradient(135deg, #ff4d8d, #ff8a5c);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     color: white;
     padding: 8rem 0 4rem;
     margin-bottom: 2rem;
@@ -111,11 +119,12 @@ nav {
     align-items: center;
     padding: 0.8rem 1.5rem;
     background-color: #fff;
-    color: #333;
+    color: var(--primary-dark);
     text-decoration: none;
     border-radius: 8px;
-    transition: transform 0.3s;
+    transition: all 0.3s;
     cursor: pointer;
+    border: 2px solid transparent;
 }
 
 .coming-soon {
@@ -131,6 +140,8 @@ nav {
 
 .app-store:hover {
     transform: translateY(-3px);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .app-store i, .play-store i {
@@ -163,16 +174,18 @@ nav {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    transition: all 0.3s;
+    border: 2px solid transparent;
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
+    border-color: var(--primary-color);
 }
 
 .feature-card i {
     font-size: 2.5rem;
-    color: #ff4d8d;
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -183,7 +196,7 @@ nav {
 /* Download section */
 .download {
     padding: 4rem 2rem;
-    background-color: #f8f9fa;
+    background-color: #FFF5F8; /* Light pink background */
     text-align: center;
 }
 
@@ -235,6 +248,11 @@ nav {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--primary-color);
 }
 
 .social-links {
@@ -244,7 +262,12 @@ nav {
 
 .social-links a {
     font-size: 1.5rem;
-    color: #ff4d8d;
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-dark);
 }
 
 /* Footer */
