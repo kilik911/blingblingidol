@@ -122,9 +122,10 @@ nav {
     color: #FF80AB;
     text-decoration: none;
     border-radius: 8px;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     cursor: pointer;
     border: 2px solid #FF80AB;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .coming-soon {
@@ -133,6 +134,7 @@ nav {
     pointer-events: none;
     position: relative;
     border-color: #FF80AB;
+    box-shadow: none;
 }
 
 .coming-soon:hover {
@@ -141,18 +143,13 @@ nav {
 
 .app-store:hover {
     transform: translateY(-3px);
-    background-color: #FF80AB;
-    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .app-store i, .play-store i {
     font-size: 2rem;
     margin-right: 0.5rem;
     color: #FF80AB;
-}
-
-.app-store:hover i {
-    color: white;
 }
 
 /* Features section */
@@ -202,7 +199,7 @@ nav {
 /* Download section */
 .download {
     padding: 4rem 2rem;
-    background-color: #FFF5F8; /* Light pink background */
+    background-color: #F8F9FA; /* Light neutral background */
     text-align: center;
 }
 
@@ -233,19 +230,15 @@ nav {
     color: #FF80AB;
     text-decoration: none;
     border-radius: 8px;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     cursor: pointer;
     border: 2px solid #FF80AB;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .download .app-store:hover {
     transform: translateY(-3px);
-    background-color: #FF80AB;
-    color: white;
-}
-
-.download .app-store:hover i {
-    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .download .app-store i, .download .play-store i {
