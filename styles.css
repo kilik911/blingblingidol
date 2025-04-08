@@ -322,6 +322,31 @@ nav {
     transform: scale(1.1);
 }
 
+.support-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    color: #FF80AB;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    border: 2px solid #FF80AB;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.support-link i {
+    font-size: 1.3rem;
+}
+
+.support-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
 /* Footer */
 footer {
     background-color: #333;
