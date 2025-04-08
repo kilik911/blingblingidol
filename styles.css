@@ -126,19 +126,19 @@ nav {
         /* Inner shadow for depth */
         inset 0 -5px 15px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
-    transition: all 0.5s ease;
+    transition: all 0.8s ease;
     cursor: pointer;
     transform: rotateY(0deg) scale(1);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden; /* Safari support */
 }
 
-.app-icon-wrapper:hover .app-icon {
+.app-icon-wrapper:hover .app-icon:not(.clicked) {
     transform: rotateY(360deg) scale(1);
 }
 
 .app-icon.clicked {
-    transform: rotateY(360deg) scale(2.2);
+    transform: rotateY(720deg) scale(2.2);
 }
 
 @keyframes float {
@@ -425,7 +425,7 @@ footer {
         height: 350px;
     }
     .app-icon.clicked {
-        transform: rotateY(360deg) scale(2);
+        transform: rotateY(720deg) scale(2);
     }
 }
 
@@ -454,6 +454,6 @@ footer {
         height: 280px;
     }
     .app-icon.clicked {
-        transform: rotateY(360deg) scale(1.8);
+        transform: rotateY(720deg) scale(1.8);
     }
 } 
