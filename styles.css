@@ -11,6 +11,12 @@ body {
     color: #333;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
 /* Header styles */
 header {
     background-color: #fff;
@@ -24,7 +30,7 @@ header {
 nav {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,14 +55,21 @@ nav {
 
 /* Hero section */
 .hero {
-    padding: 8rem 2rem 4rem;
+    position: relative;
+    width: 100%;
     background: linear-gradient(135deg, #ff4d8d, #ff8a5c);
     color: white;
+    padding: 8rem 0 4rem;
+    margin-bottom: 2rem;
+}
+
+.hero-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .hero-content {
@@ -174,6 +187,11 @@ nav {
     text-align: center;
 }
 
+.download-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .download h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -181,6 +199,10 @@ nav {
 
 .download p {
     margin-bottom: 2rem;
+}
+
+.download .download-buttons {
+    justify-content: center;
 }
 
 /* Contact section */
@@ -235,10 +257,10 @@ footer {
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .hero {
+    .hero-wrapper {
         flex-direction: column;
         text-align: center;
-        padding-top: 6rem;
+        padding-top: 2rem;
     }
 
     .hero-content {
