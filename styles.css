@@ -138,7 +138,7 @@ nav {
 }
 
 .app-icon.clicked {
-    transform: rotateY(360deg) scale(2.2);
+    transform: rotateY(360deg) scale(1);
 }
 
 @keyframes float {
@@ -425,7 +425,7 @@ footer {
         height: 350px;
     }
     .app-icon.clicked {
-        transform: rotateY(360deg) scale(2);
+        transform: rotateY(360deg) scale(1);
     }
 }
 
@@ -454,6 +454,6 @@ footer {
         height: 280px;
     }
     .app-icon.clicked {
-        transform: rotateY(360deg) scale(1.8);
+        transform: rotateY(360deg) scale(1);
     }
 } 
