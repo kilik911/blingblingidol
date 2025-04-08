@@ -341,6 +341,7 @@ nav {
 .support-link i {
     font-size: 1.3rem;
     color: #FF80AB;
+    transition: transform 0.3s ease;
 }
 
 .support-link span {
@@ -350,6 +351,10 @@ nav {
 .support-link:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.support-link:hover i {
+    transform: scale(1.1);
 }
 
 /* Footer */
