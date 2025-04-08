@@ -133,6 +133,10 @@ nav {
     -webkit-backface-visibility: hidden; /* Safari support */
 }
 
+.app-icon-wrapper:hover .app-icon:not(.clicked) {
+    transform: rotateY(360deg) scale(1);
+}
+
 .app-icon.clicked {
     /* Rotate twice on click to make it distinct from hover */
     transform: rotateY(720deg) scale(1);
