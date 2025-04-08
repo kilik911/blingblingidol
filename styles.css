@@ -340,6 +340,11 @@ nav {
 
 .support-link i {
     font-size: 1.3rem;
+    color: #FF80AB;
+}
+
+.support-link span {
+    color: #FF80AB;
 }
 
 .support-link:hover {
